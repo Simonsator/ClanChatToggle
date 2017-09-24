@@ -3,13 +3,13 @@ package de.simonsator.partyandfriends.clan.extension.chattoggle.commands;
 import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.clan.ClansMain;
 import de.simonsator.partyandfriends.clan.api.ClansManager;
-import de.simonsator.partyandfriends.clan.api.abstractcommands.ClanSubCommand;
+import de.simonsator.partyandfriends.clan.api.abstractcommands.ClanMemberCommand;
 import de.simonsator.partyandfriends.clan.extension.chattoggle.ChatManager;
 import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.config.Configuration;
 
-public class ToggleSubCommand extends ClanSubCommand implements Listener {
+public class ToggleSubCommand extends ClanMemberCommand implements Listener {
 	private final ChatManager CHAT_MANAGER;
 	private final Configuration CONFIG;
 

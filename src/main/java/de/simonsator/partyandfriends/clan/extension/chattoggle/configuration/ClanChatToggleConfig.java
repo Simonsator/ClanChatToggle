@@ -1,13 +1,14 @@
 package de.simonsator.partyandfriends.clan.extension.chattoggle.configuration;
 
+import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
 
 import java.io.File;
 import java.io.IOException;
 
 public class ClanChatToggleConfig extends ConfigurationCreator {
-	public ClanChatToggleConfig(File file) throws IOException {
-		super(file);
+	public ClanChatToggleConfig(File file, PAFExtension pPlugin) throws IOException {
+		super(file, pPlugin, true);
 		readFile();
 		loadDefaultValues();
 		saveFile();
@@ -25,10 +26,4 @@ public class ClanChatToggleConfig extends ConfigurationCreator {
 		set("Messages.Help",
 				"&8/&5clan toggle &8- &7Toggles if you msg directly into the clan chat");
 	}
-
-	@Override
-	public void reloadConfiguration() throws IOException {
-		configuration = (new ClanChatToggleConfig(FILE)).getCreatedConfiguration();
-	}
-
 }

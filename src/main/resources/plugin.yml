@@ -1,6 +1,6 @@
 name: ClanChatToggle
 version: ${project.version}
 author: Simonsator
-depends: [Clans]
+depends: [ Clans ]
 main: de.simonsator.partyandfriends.clan.extension.chattoggle.ChatTogglePlugin
 description: Adds the subcommand /clan toggle.

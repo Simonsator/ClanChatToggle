@@ -1,6 +1,7 @@
 package de.simonsator.partyandfriends.clan.extension.chattoggle;
 
-import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
+import de.simonsator.partyandfriends.api.PAFExtension;
+import de.simonsator.partyandfriends.api.adapter.BukkitBungeeAdapter;
 import de.simonsator.partyandfriends.api.pafplayers.PAFPlayerManager;
 import de.simonsator.partyandfriends.clan.api.events.PlayerLeftClanEvent;
 import de.simonsator.partyandfriends.clan.commands.ClanCommands;
@@ -15,24 +16,24 @@ import net.md_5.bungee.event.EventHandler;
 import java.util.HashSet;
 import java.util.UUID;
 
-/**
- * @author Simonsator
- * @version 1.0.0 03.10.16
- */
 public class ChatManager implements Listener {
-	private HashSet<UUID> players = new HashSet<>();
+	private final HashSet<UUID> players = new HashSet<>();
 	private final SubCommand chatCommand = ClanCommands.getInstance().getSubCommand(Chat.class);
+	private final PAFExtension PLUGIN;
+
+	public ChatManager(PAFExtension chatTogglePlugin) {
+		PLUGIN = chatTogglePlugin;
+	}
 
 	@EventHandler
 	public void onWrite(ChatEvent pEvent) {
-		OnlinePAFPlayer p = PAFPlayerManager.getInstance().getPlayer((ProxiedPlayer) pEvent.getSender());
+		ProxiedPlayer player = (ProxiedPlayer) pEvent.getSender();
 		String message = pEvent.getMessage();
-		if (message.startsWith("/"))
-			return;
-		if (!contains(p.getUniqueId()))
-			return;
+		if (message.startsWith("/")) return;
+		if (!contains(player.getUniqueId())) return;
 		pEvent.setCancelled(true);
-		chatCommand.onCommand(p, ("chat " + message).split(" "));
+		BukkitBungeeAdapter.getInstance().runAsync(PLUGIN, () ->
+				chatCommand.onCommand(PAFPlayerManager.getInstance().getPlayer(player), ("chat " + message).split(" ")));
 	}
 
 	@EventHandler

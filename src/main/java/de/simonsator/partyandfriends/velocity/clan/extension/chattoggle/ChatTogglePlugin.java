@@ -1,17 +1,22 @@
-package de.simonsator.partyandfriends.clan.extension.chattoggle;
+package de.simonsator.partyandfriends.velocity.clan.extension.chattoggle;
 
-import de.simonsator.partyandfriends.api.PAFExtension;
-import de.simonsator.partyandfriends.api.adapter.BukkitBungeeAdapter;
-import de.simonsator.partyandfriends.clan.commands.ClanCommands;
-import de.simonsator.partyandfriends.clan.extension.chattoggle.commands.ToggleSubCommand;
-import de.simonsator.partyandfriends.clan.extension.chattoggle.configuration.ClanChatToggleConfig;
-import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
+import de.simonsator.partyandfriends.velocity.api.PAFExtension;
+import de.simonsator.partyandfriends.velocity.api.adapter.BukkitBungeeAdapter;
+import de.simonsator.partyandfriends.velocity.clan.commands.ClanCommands;
+import de.simonsator.partyandfriends.velocity.clan.extension.chattoggle.commands.ToggleSubCommand;
+import de.simonsator.partyandfriends.velocity.clan.extension.chattoggle.configuration.ClanChatToggleConfig;
+import de.simonsator.partyandfriends.velocity.utilities.ConfigurationCreator;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 
 @SuppressWarnings("unused")
 public class ChatTogglePlugin extends PAFExtension {
+	public ChatTogglePlugin(Path folder) {
+		super(folder);
+	}
+
 	@Override
 	public void onEnable() {
 		try {
@@ -24,5 +29,10 @@ public class ChatTogglePlugin extends PAFExtension {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public String getName() {
+		return "ClanChatToggle";
 	}
 }

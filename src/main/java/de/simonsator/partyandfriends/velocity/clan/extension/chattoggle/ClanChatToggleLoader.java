@@ -11,8 +11,8 @@ import de.simonsator.partyandfriends.velocity.main.PAFPlugin;
 
 import java.nio.file.Path;
 
-@Plugin(id = "clanchattoggle", name = "ClanChatToggle", version = "1.0.5-RELEASE",
-		url = "https://www.spigotmc.org/resources/prefixes-for-party-and-friends.43105/",
+@Plugin(id = "clanchattoggle", name = "ClanChatToggle", version = "1.0.2-RELEASE",
+		url = "https://www.spigotmc.org/resources/clan-chat-toggle-for-clans.47498/",
 		description = "Adds the subcommand /clan toggle."
 		, authors = {"JT122406", "Simonsator"}, dependencies = {@Dependency(id = "partyandfriends")})
 public class ClanChatToggleLoader {
@@ -30,7 +30,7 @@ public class ClanChatToggleLoader {
 		PAFPlugin.loadExtension(new VelocityExtensionLoadingInfo(new ChatTogglePlugin(folder),
 				"clanchattoggle",
 				"ClanChatToggle",
-				"1.0.5-RELEASE", "JT122406, Simonsator"));
+				"1.0.2-RELEASE", "JT122406, Simonsator"));
 	}
 
 }

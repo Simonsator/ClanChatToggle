@@ -10,6 +10,7 @@ import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
 import java.io.File;
 import java.io.IOException;
 
+@SuppressWarnings("unused")
 public class ChatTogglePlugin extends PAFExtension {
 	@Override
 	public void onEnable() {

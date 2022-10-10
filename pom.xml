@@ -52,7 +52,7 @@
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>Clans-Velocity</artifactId>
-			<version>0.9.9.34</version>
+			<version>0.9.9.35</version>
 		</dependency>
 	</dependencies>
 

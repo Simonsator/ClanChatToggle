@@ -6,7 +6,7 @@
 
 	<groupId>de.simonsator</groupId>
 	<artifactId>Clan-Chat-Toggle</artifactId>
-	<version>1.0.1-RELEASE</version>
+	<version>1.0.2-RELEASE</version>
 	<build>
 		<plugins>
 			<plugin>

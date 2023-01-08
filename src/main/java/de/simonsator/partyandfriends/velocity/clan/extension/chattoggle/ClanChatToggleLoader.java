@@ -14,7 +14,7 @@ import java.nio.file.Path;
 @Plugin(id = "clanchattoggle", name = "ClanChatToggle", version = "1.0.2-RELEASE",
 		url = "https://www.spigotmc.org/resources/clan-chat-toggle-for-clans.47498/",
 		description = "Adds the subcommand /clan toggle."
-		, authors = {"JT122406", "Simonsator"}, dependencies = {@Dependency(id = "partyandfriends")})
+		, authors = {"JT122406", "Simonsator"}, dependencies = {@Dependency(id = "partyandfriends"), @Dependency(id = "clans-loader")})
 public class ClanChatToggleLoader {
 
 	private final Path folder;

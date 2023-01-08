@@ -12,7 +12,6 @@ public class ClanChatToggleConfig extends ConfigurationCreator {
 		readFile();
 		loadDefaultValues();
 		saveFile();
-		//process(configuration);
 	}
 
 	private void loadDefaultValues() {

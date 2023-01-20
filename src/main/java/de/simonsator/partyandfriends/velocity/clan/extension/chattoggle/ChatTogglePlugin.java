@@ -11,7 +11,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 
-@SuppressWarnings("unused")
 public class ChatTogglePlugin extends PAFExtension {
 	public ChatTogglePlugin(Path folder) {
 		super(folder);

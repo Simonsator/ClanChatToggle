@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>de.simonsator</groupId>
-	<artifactId>Clan-Chat-Toggle</artifactId>
+	<artifactId>Clan-Chat-Toggle-Velocity</artifactId>
 	<version>1.0.2-RELEASE</version>
 	<build>
 		<plugins>

@@ -1,7 +1,7 @@
-package de.simonsator.partyandfriends.clan.extension.chattoggle.configuration;
+package de.simonsator.partyandfriends.velocity.clan.extension.chattoggle.configuration;
 
-import de.simonsator.partyandfriends.api.PAFExtension;
-import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
+import de.simonsator.partyandfriends.velocity.api.PAFExtension;
+import de.simonsator.partyandfriends.velocity.utilities.ConfigurationCreator;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +12,6 @@ public class ClanChatToggleConfig extends ConfigurationCreator {
 		readFile();
 		loadDefaultValues();
 		saveFile();
-		process(configuration);
 	}
 
 	private void loadDefaultValues() {

@@ -1,14 +1,13 @@
-package de.simonsator.partyandfriends.clan.extension.chattoggle.commands;
+package de.simonsator.partyandfriends.velocity.clan.extension.chattoggle.commands;
 
-import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
-import de.simonsator.partyandfriends.clan.ClansMain;
-import de.simonsator.partyandfriends.clan.api.ClansManager;
-import de.simonsator.partyandfriends.clan.api.abstractcommands.ClanMemberCommand;
-import de.simonsator.partyandfriends.clan.extension.chattoggle.ChatManager;
-import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
-import net.md_5.bungee.api.plugin.Listener;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.OnlinePAFPlayer;
+import de.simonsator.partyandfriends.velocity.clan.ClansMain;
+import de.simonsator.partyandfriends.velocity.clan.api.ClansManager;
+import de.simonsator.partyandfriends.velocity.clan.api.abstractcommands.ClanMemberCommand;
+import de.simonsator.partyandfriends.velocity.clan.extension.chattoggle.ChatManager;
+import de.simonsator.partyandfriends.velocity.utilities.ConfigurationCreator;
 
-public class ToggleSubCommand extends ClanMemberCommand implements Listener {
+public class ToggleSubCommand extends ClanMemberCommand {
 	private final ChatManager CHAT_MANAGER;
 	private final ConfigurationCreator CONFIG;
 
